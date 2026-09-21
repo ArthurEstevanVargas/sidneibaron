@@ -21,6 +21,8 @@ As correções foram aplicadas separadamente na main, preservando as falhas reai
 | SAST | [Execução 35667402370](https://github.com/ArthurEstevanVargas/sidneibaron/actions/runs/35667402370) | Duas regras apontaram SQL Injection |
 | SCA | [Execução 35667534615](https://github.com/ArthurEstevanVargas/sidneibaron/actions/runs/35667534615) | Dependência Log4j Core vulnerável, incluindo CVE-2021-44228 |
 
+| Dockerfile | [Execução 35667755536](https://github.com/ArthurEstevanVargas/sidneibaron/actions/runs/35667755536) | Hadolint bloqueou latest (DL3007) e root (DL3002) |
+
 O [README automático](../README.md) registra o resultado do build, a execução correspondente, o nome da imagem, suas tags e o digest quando a publicação conclui. O nome da imagem segue o repositório existente: `ghcr.io/arthurestevanvargas/sidneibaron`.
 
 Os screenshots e logs de entrega são disponibilizados no pacote local de evidências. Não confundir as primeiras execuções bloqueadas pela conta com as falhas reais listadas acima.
