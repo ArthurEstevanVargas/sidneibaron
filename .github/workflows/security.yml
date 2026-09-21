@@ -115,6 +115,16 @@ jobs:
       - name: Checkout do codigo
         uses: actions/checkout@v4
 
+      - name: Configurar JDK 17 e cache Maven
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          cache: 'maven'
+
+      - name: Resolver dependencias para analise completa e cache local
+        run: mvn --batch-mode dependency:resolve
+
       - name: Escanear dependencias do projeto
         uses: aquasecurity/trivy-action@v0.36.0
         with:
@@ -144,9 +154,7 @@ jobs:
         with:
           dockerfile: Dockerfile
           failure-threshold: warning
-          # Deve falhar por causa de:
-          #  - DL3007: uso da tag "latest" (imagem nao fixada)
-          #  - DL3002: ultimo USER definido como "root"
+          # Bloqueia regressao para latest ou execucao como root.
 
   # -----------------------------------------------------------------------
   # JOB 6 - BUILD & PUSH DA IMAGEM (GHCR)
@@ -245,13 +253,13 @@ jobs:
             echo "| SCA (Trivy) | $SCA_RESULT |"
             echo "| Lint do Dockerfile (Hadolint) | $DOCKERFILE_LINT |"
             echo ""
-            if [ "${{ needs.secret-scan.result }}" = "failure" ] || \
-               [ "${{ needs.unit-tests.result }}" = "failure" ] || \
-               [ "${{ needs.sast.result }}" = "failure" ] || \
-               [ "${{ needs.sca.result }}" = "failure" ] || \
-               [ "${{ needs.dockerfile-lint.result }}" = "failure" ]; then
+            if [ "${{ needs.secret-scan.result }}" != "success" ] || \
+               [ "${{ needs.unit-tests.result }}" != "success" ] || \
+               [ "${{ needs.sast.result }}" != "success" ] || \
+               [ "${{ needs.sca.result }}" != "success" ] || \
+               [ "${{ needs.dockerfile-lint.result }}" != "success" ]; then
               echo "### 🔴 Resultado geral: BLOQUEADO"
-              echo "Pelo menos um gate de seguranca falhou — a imagem NAO foi publicada no GHCR."
+              echo "Pelo menos um gate nao concluiu com sucesso; publicacao bloqueada."
             else
               echo "### 🟢 Resultado geral: LIBERADO"
               echo "Todos os gates de seguranca passaram."
