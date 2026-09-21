@@ -8,6 +8,6 @@ Para a BancoFácil fechar o ciclo, proponho DAST com ZAP em staging antes da lib
 
 Feature flags e liberação gradual reduziriam o alcance inicial de uma alteração, acompanhando erros e indicadores de segurança por versão. Não corrigem sozinhas uma biblioteca vulnerável: é necessário reconstruir, testar e substituir a imagem afetada. Incidentes devem gerar testes de regressão e ajustes no modelo de ameaças. Isso conecta observações de produção às decisões de desenvolvimento.
 
-Esta discussão descreve os próximos controles; não afirma que foram implantados. A publicação no GHCR e a comprovação final da pipeline ainda estão pendentes de execução remota. As validações locais são evidências complementares e não substituem os prints da sequência de falhas e da execução final solicitados pelo professor.
+Esta discussão propõe controles operacionais adicionais; não afirma que DAST, monitoramento e feature flags foram implantados. O resultado da publicação no GHCR e o link da execução correspondente são registrados pelo README automático. As evidências de cada gate documentam a transição da versão vulnerável para a versão corrigida; as validações locais complementam essa verificação remota.
 
 Referências: [NIST SSDF](https://csrc.nist.gov/pubs/sp/800/218/final), [ZAP](https://www.zaproxy.org/docs/), [Trivy](https://trivy.dev/docs/latest/target/filesystem/) e [OWASP Secrets Management](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html).
