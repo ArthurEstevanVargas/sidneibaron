@@ -7,3 +7,6 @@ target/
 # Evidencias locais incluem dados da conta e nao devem ser publicadas.
 docs/evidencias/
 docs/Relatorio-execucao.md
+
+entrega-devsecops/
+entrega-devsecops.zip
