@@ -1,0 +1,4 @@
+# Somente ocorrencias historicas das credenciais publicas didaticas da atividade.
+# Novos commits e novos segredos continuam bloqueados.
+11254121a9f83ddffaafe78aca9b0e4679dde5a9:src/main/java/com/unifebe/devsecops/config/AppConfig.java:aws-access-token:14
+11254121a9f83ddffaafe78aca9b0e4679dde5a9:src/main/java/com/unifebe/devsecops/config/AppConfig.java:stripe-access-token:18
