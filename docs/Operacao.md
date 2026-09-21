@@ -16,4 +16,4 @@ O README é gerado pela pipeline e não foi editado manualmente. O integrante Ar
 
 Branch Protection e multi-stage são opcionais no enunciado e não foram configurados. Exigir PR em `main` também exige revisar o job que grava o README diretamente nessa branch. Link da entrega existente: [ArthurEstevanVargas/sidneibaron](https://github.com/ArthurEstevanVargas/sidneibaron).
 
-Pesquisa: [Parte 1](Pesquisa-ShiftLeft-ShiftRight.md). Discussão: [Parte 2](Discussao-final.md). Evidências locais e relatório detalhado ficam em `docs/evidencias` e `docs/Relatorio-execucao.md`, fora do versionamento por incluírem informações da conta.
+Pesquisa: [Parte 1](Pesquisa-ShiftLeft-ShiftRight.md). Discussão: [Parte 2](Discussao-final.md). Os sete prints da entrega estão publicados em [Entrega.md](Entrega.md) e `docs/prints`. Logs locais e relatório de trabalho ficam em `docs/evidencias` e `docs/Relatorio-execucao.md`, fora do versionamento por incluírem informações da conta.
