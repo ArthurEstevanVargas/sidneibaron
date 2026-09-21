@@ -12,7 +12,7 @@ Spring Boot foi atualizado para 3.5.16 e Tomcat para 10.1.60. O override de Tomc
 
 O workflow preserva os oito jobs e os cinco gates sequenciais. O resumo somente declara LIBERADO se todos retornarem `success`. Cancelamento e etapas puladas bloqueiam a liberação. A análise SCA resolve as dependências no cache Maven antes do Trivy para reduzir consultas remotas e erros 429. Não foram adicionadas exclusões de CVEs nem reduzido o nível de bloqueio HIGH/CRITICAL.
 
-O README é gerado pela pipeline e não foi editado manualmente. Preencher `alunos.txt` com os nomes reais ainda depende dos integrantes. O repositório existente chama-se `sidneibaron`; o workflow publicará `ghcr.io/arthurestevanvargas/sidneibaron`, enquanto a atividade sugere o nome `banco-facil-api`. Essa divergência deve ser resolvida com o responsável pela entrega, sem renomear o repositório automaticamente.
+O README é gerado pela pipeline e não foi editado manualmente. O integrante Arthur Estevan Vargas está identificado em `alunos.txt`. O repositório existente chama-se `sidneibaron`; o workflow publicará `ghcr.io/arthurestevanvargas/sidneibaron`, enquanto a atividade sugere o nome `banco-facil-api`. Essa divergência deve ser resolvida com o responsável pela entrega, sem renomear o repositório automaticamente.
 
 Branch Protection e multi-stage são opcionais no enunciado e não foram configurados. Exigir PR em `main` também exige revisar o job que grava o README diretamente nessa branch. Link da entrega existente: [ArthurEstevanVargas/sidneibaron](https://github.com/ArthurEstevanVargas/sidneibaron).
 

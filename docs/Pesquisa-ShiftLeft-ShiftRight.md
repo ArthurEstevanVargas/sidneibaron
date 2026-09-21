@@ -1,6 +1,6 @@
 # Segurança ao longo do ciclo de desenvolvimento
 
-Material de apoio para a Parte 1 da atividade BancoFácil Digital. A identificação e a revisão individual pelo integrante ainda precisam ser feitas. Fontes consultadas em 21/09/2026.
+Autor: Arthur Estevan Vargas. Pesquisa da Parte 1 da atividade BancoFácil Digital, preparada para revisão individual. Fontes consultadas em 21/09/2026.
 
 ## 1. Shift Left e Shift Right
 
